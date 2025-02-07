@@ -22,7 +22,7 @@ class bookingView(APIView):
         return Response(serializer.data)
     
     def post(self, request):
-        serializer = MenuSerializer(data = request.data)
+        serializer = BookingSerializer(data = request.data)
         
         if serializer.is_valid():
             serializer.save()
