@@ -10,5 +10,7 @@ urlpatterns = [
     path('menu/', views.MenuItemView.as_view(), name = 'menu-list'),
     path('menu/<int:pk>', views.SingleMenuItemView.as_view(), name = 'menu-item'),
     path('login/', obtain_auth_token ,name='login'),
+    path('register/', views.RegisterView.as_view(), name='register'),
+    path('logout/', views.logout_view, name='logout'), 
     
 ]
